@@ -7,17 +7,29 @@ use Shopware\Storefront\Controller\StorefrontController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Shopware\Core\System\SystemConfig\SystemConfigService;
 
 /**
  * @Route(defaults={"_routeScope"={"storefront"}})
  */
 class JobController extends StorefrontController
 {
+    private SystemConfigService $systemConfigService;
+
+    public function __construct(SystemConfigService  $systemConfigService)
+    {
+        $this->systemConfigService = $systemConfigService;
+    }
+
     /**
     * @Route("/jobs", name="frontend.jobs", methods={"GET"})
     */
     public function showJobs(): Response
     {
-        return $this->renderStorefront('@PluginSkeletonShopware/storefront/page/jobs.html.twig');
+        $textFiledConfig = $this->systemConfigService->get('PluginSkeletonShopware.config.demoTextField');
+
+        return $this->renderStorefront('@PluginSkeletonShopware/storefront/page/jobs.html.twig', [
+            'TextFiledConfig' => $textFiledConfig
+        ]);
     }
 }
