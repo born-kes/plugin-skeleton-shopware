@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Text field configuration</title>
+        <input-field type="text">
+        <name>textField</name>
+        <label>The specified value will appear on the home page</label>
+        <defaultValue>test123x</defaultValue>
+        </input-field>
+    </card>
+</config>
