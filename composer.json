@@ -1,9 +1,19 @@
 {
     "name": "born-kes/plugin-skeleton-shopware",
-    "description": "Test plugin",
+    "description": "Test plugin for shopware",
     "version": "0.0.1",
     "type": "shopware-platform-plugin",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Łukasz Martyn",
+            "email": "l.martyn.praca@gmail.com",
+            "homepage": "https://github.com/born-kes"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/born-kes/plugin-skeleton-shopware/issues"
+    },
     "autoload": {
         "psr-4": {
             "Kes\\PluginSkeletonShopware\\": "src/"
