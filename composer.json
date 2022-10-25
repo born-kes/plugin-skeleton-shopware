@@ -1,0 +1,19 @@
+{
+    "name": "born-kes/plugin-skeleton-shopware",
+    "description": "Test plugin",
+    "version": "0.0.1",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kes\\PluginSkeletonShopware\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Kes\\PluginSkeletonShopware\\PluginSkeletonShopware",
+        "label": {
+            "de-DE": "Demo des Test-Plugins",
+            "en-GB": "Demo of the test plugin"
+        }
+    }
+}
