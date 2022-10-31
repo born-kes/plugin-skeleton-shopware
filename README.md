@@ -13,6 +13,7 @@ Written according to a guide posted by the [here](https://docs.shopware.com/en/s
 - Added option to set text field value in configuration [2804b0d][2804b0d].
 - Created a page using twig template [a02ad42][a02ad42].
 - Used the data provided in the configuration in the twig template [ef2dc28][ef2dc28]
+- Add uninstall function
 
 ## TODO
 

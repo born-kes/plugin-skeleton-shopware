@@ -4,6 +4,7 @@ namespace Kes\PluginSkeletonShopware\Migration;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception;
+use Kes\PluginSkeletonShopware\PluginSkeletonShopware;
 use Shopware\Core\Framework\Migration\MigrationStep;
 
 class Migration1614903457ExampleExtension extends MigrationStep
@@ -15,8 +16,10 @@ class Migration1614903457ExampleExtension extends MigrationStep
 
     public function update(Connection $connection): void
     {
+        $dataBaseName = PluginSkeletonShopware::DATA_BASE_NAME;
+
         $sql = <<<SQL
-CREATE TABLE IF NOT EXISTS `kes_example` (
+CREATE TABLE IF NOT EXISTS `{$dataBaseName}` (
     `id` BINARY(16) NOT NULL,
     `product_id` BINARY(16) NOT NULL,
     `name` VARCHAR(255) COLLATE utf8mb4_unicode_ci,
@@ -30,7 +33,10 @@ CREATE TABLE IF NOT EXISTS `kes_example` (
     DEFAULT CHARSET = utf8mb4
     COLLATE = utf8mb4_unicode_ci;
 SQL;
-        $connection->executeStatement($sql);
+        try {
+            $connection->executeStatement($sql);
+        } catch (Exception $e) {
+        }
     }
 
     public function updateDestructive(Connection $connection): void
