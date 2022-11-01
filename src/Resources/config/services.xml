@@ -5,11 +5,25 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+        <!-- Dodaje strone Jobs -->
         <service id="Kes\PluginSkeletonShopware\Storefront\Controller\JobController" public="true">
-            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />           
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
             <call method="setContainer">
                 <argument type="service" id="service_container"/>
             </call>
         </service>
+
+        <service id="Kes\PluginSkeletonShopware\Core\Content\Example\ExampleDefinition">
+            <tag name="shopware.entity.definition" entity="kes_example" />
+        </service>
+
+        <service id="Kes\PluginSkeletonShopware\Extension\Content\Product\CustomExtension">
+            <tag name="shopware.entity.extension"/>
+        </service>
+
+        <service id="Kes\PluginSkeletonShopware\Extension\Content\Product\ExampleExtensionDefinition">
+            <tag name="shopware.entity.definition" entity="kes_example" />
+        </service>
+
     </services>
 </container>
