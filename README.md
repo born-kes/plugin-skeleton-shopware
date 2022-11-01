@@ -7,15 +7,23 @@ Written according to a guide posted by the [here](https://docs.shopware.com/en/s
 [a02ad42]: https://github.com/born-kes/plugin-skeleton-shopware/commit/a02ad42a7680661056d2ae24b69aa7952c0ca038
 [ef2dc28]: https://github.com/born-kes/plugin-skeleton-shopware/commit/ef2dc28db2eb8497481ef35167dfffb0c4fd1d8c
 
+[d808a9b3]: https://github.com/born-kes/plugin-skeleton-shopware/commit/d808a9b3cb8480c884bdf52715c3a1d999f0bd39#diff-
+[d808a9b3#Migration]: https://github.com/born-kes/plugin-skeleton-shopware/commit/d808a9b3cb8480c884bdf52715c3a1d999f0bd39#diff-
+
 ## Progress
 
 - Created a basic plug-in [3205f6][c3205f6].
 - Added option to set text field value in configuration [2804b0d][2804b0d].
 - Created a page using twig template [a02ad42][a02ad42].
 - Used the data provided in the configuration in the twig template [ef2dc28][ef2dc28]
-- Add uninstall function
+
+- Add Custom Field (text) to product entity [d808a9b3][d808a9b3]
+- Add a custom field when installing the plugin [d808a9b3#Migration][d808a9b3#Migration]
+- Add uninstall function [d808a9b3][d808a9b3]
 
 ## TODO
+- Activate the custom field, when activating the plugin
+- Deactivate the custom field, when deactivating the plugin
 
 - add input type text
 - use input in twig temple
